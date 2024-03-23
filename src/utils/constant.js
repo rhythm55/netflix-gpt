@@ -11,12 +11,14 @@ export const API_OPTIONS = {
   method: "GET",
   headers: {
     accept: "application/json",
-    Authorization:
-      "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJhMWYyMWJjMjY2NmY1N2M0ZjQxNWZhNGU5OGMyYjdmOCIsInN1YiI6IjY1ZmIwMzFhZTkzZTk1MDE0YTVjNDRmZSIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.aEtU7ljM96J9FLvXx2_SB39hXRycXfBy7qDgOIwNgTU",
+    Authorization: "Bearer " + process.env.REACT_APP_TMDB_KEY,
   },
 };
 
-export const NOW_PLAYING_MOVIES_API =
-  "https://api.themoviedb.org/3/movie/now_playing?language=en-US&page=1";
+export const GENERE_MOVIES_API = "https://api.themoviedb.org/3/movie/";
 
 export const GET_VIDEO_API = "https://api.themoviedb.org/3/movie/";
+
+export const GET_POSTER_API = "https://image.tmdb.org/t/p/w200/";
+
+export const SEARCH_MOVIE_API = "https://api.themoviedb.org/3/search/movie";

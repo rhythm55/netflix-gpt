@@ -5,12 +5,10 @@ import useMovieId from "../hooks/useMovideId";
 const TrailerVIdeo = ({ movideId }) => {
   useMovieId(movideId);
 
-  const trailerId = useSelector(
-    (state) => state.nowPlayingMovies?.trailer?.key
-  );
+  const trailerId = useSelector((state) => state.movieList?.trailer?.key);
   return (
     <iframe
-      className="ratio ratio-16x9 position-absolute h-75 mt-2"
+      className="ratio ratio-16x9 position-absolute h-90 top-0"
       src={`https://www.youtube.com/embed/${trailerId}?autoplay=1&mute=1&controls=0&loop=1`}
     ></iframe>
   );
